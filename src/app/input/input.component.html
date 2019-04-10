@@ -1,0 +1,12 @@
+<div>
+  <input #inputElement
+        class="todo-input"
+        (keyup.enter)="submitValue($event.target.value)"
+        id="my-input" type="text" name="input"
+        [placeholder]="generatePlaceholder()"
+        [value]="title">
+  <button class="btn"
+          (click)="submitValue(inputElement.value)">
+    Save
+  </button>
+</div>
